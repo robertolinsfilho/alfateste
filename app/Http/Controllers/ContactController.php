@@ -4,12 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Response;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\Validator;
-use mysql_xdevapi\Exception;
-use Nette\Schema\ValidationException;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class ContactController extends Controller
 {
@@ -101,5 +99,21 @@ class ContactController extends Controller
 
         return redirect()->route('contacts.index')
             ->with('success','Contato deletado com sucesso');
+    }
+
+    public function login(Request $request, User $user)
+    {
+        return redirect()->route('contacts.login');
+
+    }
+    public function autheticate(Request $request, User $user)
+    {
+       $usuario  =  User::where('user', '=', $user->usuario);
+       $senha  =  User::where('password', '=', $user->senha);
+
+       if(!$usuario && !$senha){
+           session()->put('usuario', $usuario);
+       }
+
     }
 }
