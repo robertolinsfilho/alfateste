@@ -81,14 +81,13 @@ class ContactController extends Controller
             'contact' => 'required|max:9'
         ]);
 
-
-
-        if ($validator->fails()) {
-            return redirect()->route('contacts.index')
-                ->with('error','Contato não foi atualizado');
-        }
+        
 
         try {
+            if ($validator->fails()) {
+                return redirect()->route('contacts.index')
+                    ->with('error','Contato não foi atualizado');
+            }
             $contact->update($request->all());
         }catch (QueryException $e){
             return redirect()->route('contacts.index')
