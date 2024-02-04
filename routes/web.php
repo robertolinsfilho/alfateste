@@ -18,4 +18,4 @@ Route::resource('/', \App\Http\Controllers\ContactController::class);
 
 Route::resource('contacts', \App\Http\Controllers\ContactController::class);
 
-Route::get('/login', '\App\Http\Controllers\ContactController@login');
+

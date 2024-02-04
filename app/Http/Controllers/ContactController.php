@@ -101,19 +101,5 @@ class ContactController extends Controller
             ->with('success','Contato deletado com sucesso');
     }
 
-    public function login(Request $request, User $user)
-    {
-        return redirect()->route('contacts.login');
 
-    }
-    public function autheticate(Request $request, User $user)
-    {
-       $usuario  =  User::where('user', '=', $user->usuario);
-       $senha  =  User::where('password', '=', $user->senha);
-
-       if(!$usuario && !$senha){
-           session()->put('usuario', $usuario);
-       }
-
-    }
 }
