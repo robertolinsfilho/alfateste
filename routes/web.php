@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('products', ContactController::class);
+Route::resource('contacts', \App\Http\Controllers\ContactController::class);
