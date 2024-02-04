@@ -11,7 +11,13 @@
     </div>
 
     @if ($message = Session::get('success'))
-        <div style="margin-top:5%" class="alert alert-success">
+        <div style="margin-top:3%" class="alert alert-success">
+            <p>{{ $message }}</p>
+        </div>
+    @endif
+
+    @if ($message = Session::get('error'))
+        <div style="margin-top:3%" class="alert alert-danger">
             <p>{{ $message }}</p>
         </div>
     @endif
