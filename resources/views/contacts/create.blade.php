@@ -45,7 +45,7 @@
             </div>
 
 
-            <div class="col-xs-12 col-sm-12 col-md-12 mt-5 text-center">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-5 mb-2 text-center">
                 <button type="submit" class="btn  btn-primary btn-lg">Criar</button>
             </div>
         </div>
