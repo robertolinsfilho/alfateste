@@ -24,7 +24,7 @@
     <form action="{{ route('contacts.store') }}" method="POST">
         @csrf
 
-        <div style="background-color: darkgrey;border-radius: 10px" class="row">
+        <div style="background-color: gainsboro;border-radius: 10px" class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 mt-1">
                 <div class="form-group">
                     <label  class="form-label">Nome</label>
