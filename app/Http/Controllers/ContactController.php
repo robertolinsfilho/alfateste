@@ -46,7 +46,7 @@ class ContactController extends Controller
 
         if ($validator->fails()) {
             return redirect()->route('contacts.index')
-                ->with('success', 'Contato criado com sucesso.');
+                ->with('error', 'Contato não foi criado.');
         }
         Contact::create($request->all());
         return redirect()->route('contacts.index')
@@ -74,14 +74,20 @@ class ContactController extends Controller
      */
     public function update(Request $request, Contact $contact)
     {
-        $request->validate([
+        $validator = Validator::make($request->all(), [
             'name' => 'required|min:5',
             'email' => 'required|email',
-            'contact' =>'required|max:9'
+            'contact' => 'required|max:9'
         ]);
 
-        $contact->update($request->all());
 
+
+        if ($validator->fails()) {
+            return redirect()->route('contacts.index')
+                ->with('error','Contato não foi atualizado');
+        }
+
+        $contact->update($request->all());
         return redirect()->route('contacts.index')
             ->with('success','Contato atualizado com sucesso');
     }
