@@ -8,6 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
 use mysql_xdevapi\Exception;
+use Nette\Schema\ValidationException;
 
 class ContactController extends Controller
 {
@@ -45,7 +46,7 @@ class ContactController extends Controller
             Contact::create($request->all());
 
 
-        }catch (Exception $e){
+        }catch (ValidationException $e){
             return redirect()->route('contacts.index')
                 ->with('success', 'Contato não foi criado');
         }
