@@ -2,15 +2,12 @@
 
 @section('content')
     <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Laravel 10</h2>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">AlfaSoft</span>
+                <span class="navbar-brand mb-0 h1"><a class="btn btn-success" href="{{ route('contacts.create') }}"> Criar novo Contato</a></span>
             </div>
-            <div style="margin-bottom: 2%;" class="pull-right">
-                <a class="btn btn-success" href="{{ route('contacts.create') }}"> Criar novo Contato</a>
-            </div>
-
-        </div>
+        </nav>
     </div>
 
     @if ($message = Session::get('success'))
