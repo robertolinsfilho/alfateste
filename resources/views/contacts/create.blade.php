@@ -40,7 +40,8 @@
             <div class="col-xs-12 col-sm-12 col-md-12 mt-1">
                 <div class="form-group">
                     <label  class="form-label">Contato</label>
-                    <input class="form-control" type="text"  name="contact" placeholder="Contato">
+                    <input class="form-control" type="text" maxlength="9" name="contact" placeholder="Contato">
+                    <div class="form-text">Apenas 9 numeros</div>
                 </div>
             </div>
 

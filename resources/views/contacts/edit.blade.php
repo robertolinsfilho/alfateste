@@ -41,7 +41,8 @@
             <div class="col-xs-12 col-sm-12 col-md-12 mt-1">
                 <div class="form-group">
                     <label  class="form-label">Contato</label>
-                    <input class="form-control"  name="contact"  value="{{ $contact->contact }}" placeholder="Contato">
+                    <input class="form-control"  name="contact"  maxlength="9" value="{{ $contact->contact }}" placeholder="Contato">
+                    <div class="form-text">Apenas 9 numeros</div>
                 </div>
             </div>
 
