@@ -41,12 +41,12 @@
 
                         <a class="btn btn-info" href="{{ route('contacts.show',$contact->id) }}">Show</a>
 
-                        <a class="btn btn-primary" href="{{ route('contacts.edit',$contact->id) }}">Edit</a>
+                        <a class="btn btn-primary" href="{{ route('contacts.edit',$contact->id) }}">Editar</a>
 
                         @csrf
                         @method('DELETE')
 
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger">Deletar</button>
                     </form>
                 </td>
             </tr>
