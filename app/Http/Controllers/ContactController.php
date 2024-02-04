@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
@@ -76,8 +77,8 @@ class ContactController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|min:5',
-            'email' => 'required|email|unique',
-            'contact' => 'required|max:9|unique'
+            'email' => 'required|email',
+            'contact' => 'required|max:9'
         ]);
 
 
@@ -87,7 +88,13 @@ class ContactController extends Controller
                 ->with('error','Contato não foi atualizado');
         }
 
-        $contact->update($request->all());
+        try {
+            $contact->update($request->all());
+        }catch (QueryException $e){
+            return redirect()->route('contacts.index')
+                ->with('error','Contato não foi atualizado');
+        }
+
         return redirect()->route('contacts.index')
             ->with('success','Contato atualizado com sucesso');
     }
