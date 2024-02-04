@@ -14,7 +14,7 @@ class ContactController extends Controller
      */
     public function index(): View
     {
-        $products = Contact::latest()->paginate(5);
+        $contacts = Contact::latest()->paginate(5);
 
         return view('contacts.index',compact('contacts'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
