@@ -46,7 +46,7 @@
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12 mt-5 text-center">
-                <button type="submit" id="btn-editar" class="btn btn-primary">Editar</button>
+                <button type="submit" id="btn-editar" class="btn btn-lg">Editar</button>
             </div>
 
         </div>
