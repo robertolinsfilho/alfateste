@@ -40,8 +40,8 @@ class ContactController extends Controller
 
         $validator = Validator::make($request->all(), [
             'name' => 'required|min:5',
-            'email' => 'required|email|unique',
-            'contact' => 'required|max:9|unique'
+            'email' => 'required|email|unique:contacts',
+            'contact' => 'required|max:9|unique:contacts'
         ]);
 
         if ($validator->fails()) {
@@ -76,8 +76,8 @@ class ContactController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|min:5',
-            'email' => 'required|email|',
-            'contact' => 'required|max:9|'
+            'email' => 'required|unique:contacts|email|',
+            'contact' => 'required|unique:contacts|max:9|'
         ]);
 
 
