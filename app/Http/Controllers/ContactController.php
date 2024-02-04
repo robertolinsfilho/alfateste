@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Validator;
 use mysql_xdevapi\Exception;
 use Nette\Schema\ValidationException;
 
@@ -36,20 +37,18 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        try {
-            $request->validate([
-                'name' => 'required|min:5',
-                'email' => 'required|email',
-                'contact' => 'required|max:9'
-            ]);
 
-            Contact::create($request->all());
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|min:5',
+            'email' => 'required|email',
+            'contact' => 'required|max:9'
+        ]);
 
-
-        }catch (ValidationException $e){
+        if ($validator->fails()) {
             return redirect()->route('contacts.index')
-                ->with('success', 'Contato não foi criado');
+                ->with('success', 'Contato criado com sucesso.');
         }
+        Contact::create($request->all());
         return redirect()->route('contacts.index')
             ->with('success', 'Contato criado com sucesso.');
     }
