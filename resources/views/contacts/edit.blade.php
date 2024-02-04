@@ -2,14 +2,12 @@
 
 @section('content')
     <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Editar Contato</h2>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Editar Contato</span>
+                <span class="navbar-brand mb-0 h1"><a class="btn btn-primary" href="{{ route('contacts.index') }}"> Voltar</a></span>
             </div>
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('contacts.index') }}"> Voltar</a>
-            </div>
-        </div>
+        </nav>
     </div>
 
     @if ($errors->any())
