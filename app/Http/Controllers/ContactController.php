@@ -42,7 +42,7 @@ class ContactController extends Controller
         Contact::create($request->all());
 
         return redirect()->route('contacts.index')
-            ->with('success','Contact created successfully.');
+            ->with('success','Contato criado com sucesso.');
     }
 
     /**
@@ -75,7 +75,7 @@ class ContactController extends Controller
         $contact->update($request->all());
 
         return redirect()->route('contacts.index')
-            ->with('success','Contact updated successfully');
+            ->with('success','Contato atualizado com sucesso');
     }
 
     /**
@@ -86,6 +86,6 @@ class ContactController extends Controller
         $contact->delete();
 
         return redirect()->route('contacts.index')
-            ->with('success','Contact deleted successfully');
+            ->with('success','Contato deletado com sucesso');
     }
 }

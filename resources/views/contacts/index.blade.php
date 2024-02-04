@@ -6,14 +6,15 @@
             <div class="pull-left">
                 <h2>Laravel 10</h2>
             </div>
-            <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('contacts.create') }}"> Create New Contact</a>
+            <div style="margin-bottom: 2%;" class="pull-right">
+                <a class="btn btn-success" href="{{ route('contacts.create') }}"> Criar novo Contato</a>
             </div>
+
         </div>
     </div>
 
     @if ($message = Session::get('success'))
-        <div class="alert alert-success">
+        <div style="margin-top:5%" class="alert alert-success">
             <p>{{ $message }}</p>
         </div>
     @endif

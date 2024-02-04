@@ -37,13 +37,13 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Email:</strong>
-                    <input class="form-control"  name="email" placeholder="Email">{{ $contact->email }}</input>
+                    <input class="form-control"  name="email" value="{{ $contact->email }}" placeholder="Email">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Contato:</strong>
-                    <input class="form-control"  name="contact" placeholder="Contato">{{ $contact->contact }}</input>
+                    <input class="form-control"  name="contact"  value="{{ $contact->contact }}" placeholder="Contato">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
