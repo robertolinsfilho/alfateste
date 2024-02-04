@@ -36,13 +36,13 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Email:</strong>
-                    <input class="form-control" style="height:150px" name="detail" placeholder="Email">
+                    <input class="form-control" type="text"  name="detail" placeholder="Email">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Contato:</strong>
-                    <input class="form-control" style="height:150px" name="contact" placeholder="Contato">
+                    <input class="form-control" type="text"  name="contact" placeholder="Contato">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
