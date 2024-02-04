@@ -44,9 +44,11 @@
                     <input class="form-control"  name="contact"  value="{{ $contact->contact }}" placeholder="Contato">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-5 text-center">
                 <button type="submit" id="btn-editar" class="btn btn-primary">Editar</button>
             </div>
+
         </div>
 
     </form>
