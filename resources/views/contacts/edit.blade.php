@@ -43,7 +43,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Contato:</strong>
-                    <input class="form-control"  name="contact" placeholder="Contato">{{ $contact->detail }}</input>
+                    <input class="form-control"  name="contact" placeholder="Contato">{{ $contact->contact }}</input>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
