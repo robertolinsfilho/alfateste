@@ -28,19 +28,19 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Nome:</strong>
+                    <label  class="form-label">Nome</label>
                     <input type="text" name="name" value="{{ $contact->name }}" class="form-control" placeholder="Nome">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Email:</strong>
+                    <label  class="form-label">Email</label>
                     <input class="form-control"  name="email" value="{{ $contact->email }}" placeholder="Email">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Contato:</strong>
+                    <label  class="form-label">Contato</label>
                     <input class="form-control"  name="contact"  value="{{ $contact->contact }}" placeholder="Contato">
                 </div>
             </div>

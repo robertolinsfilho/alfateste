@@ -27,22 +27,24 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Nome:</strong>
+                    <label  class="form-label">Nome</label>
                     <input type="text" name="name" class="form-control" placeholder="Name">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Email:</strong>
+                    <label  class="form-label">Email</label>
                     <input class="form-control" type="email"  name="email" placeholder="Email">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Contato:</strong>
+                    <label  class="form-label">Contato</label>
                     <input class="form-control" type="text"  name="contact" placeholder="Contato">
                 </div>
             </div>
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+
             <div class="col-xs-12 col-sm-12 col-md-12 mt-5 text-center">
                 <button type="submit" class="btn btn-primary">Criar</button>
             </div>
