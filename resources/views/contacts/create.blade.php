@@ -2,14 +2,12 @@
 
 @section('content')
     <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Add New Contact</h2>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Adicionar Novo Contato</span>
+                <span class="navbar-brand mb-0 h1"><a class="btn btn-primary" href="{{ route('contacts.index') }}"> Voltar</a></span>
             </div>
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('contacts.index') }}"> Back</a>
-            </div>
-        </div>
+        </nav>
     </div>
 
     @if ($errors->any())
@@ -45,7 +43,7 @@
                     <input class="form-control" type="text"  name="contact" placeholder="Contato">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-5 text-center">
                 <button type="submit" class="btn btn-primary">Criar</button>
             </div>
         </div>
