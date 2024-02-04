@@ -18,10 +18,10 @@
 
     <table class="table table-striped">
         <tr>
-            <th>No</th>
-            <th>Name</th>
+            <th>Id</th>
+            <th>Nome</th>
             <th>Email</th>
-            <th>Contact</th>
+            <th>Contato</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($contacts as $contact)

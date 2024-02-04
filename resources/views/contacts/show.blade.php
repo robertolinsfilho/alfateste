@@ -13,14 +13,26 @@
 
     <table class="table table-striped">
         <tr>
-            <th>Name</th>
+            <th>Nome</th>
             <th>Email</th>
-            <th>Contact</th>
+            <th>Contato</th>
+            <th>Action</th>
+
         </tr>
             <tr>
                 <td>{{ $contact->name }}</td>
                 <td>{{ $contact->email }}</td>
                 <td>{{ $contact->contact }}</td>
+                <td>
+                    <form action="{{ route('contacts.destroy',$contact->id) }}" method="POST">
+                        <a class="btn btn-primary" href="{{ route('contacts.edit',$contact->id) }}">Edit</a>
+
+                        @csrf
+                        @method('DELETE')
+
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
             </tr>
 
     </table>
