@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
+use mysql_xdevapi\Exception;
+
 class ContactController extends Controller
 {
     /**
@@ -33,16 +35,22 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required|min:5',
-            'email' => 'required|email',
-            'contact' =>'required|max:9'
-        ]);
+        try {
+            $request->validate([
+                'name' => 'required|min:5',
+                'email' => 'required|email',
+                'contact' => 'required|max:9'
+            ]);
 
-        Contact::create($request->all());
+            Contact::create($request->all());
 
+
+        }catch (Exception $e){
+            return redirect()->route('contacts.index')
+                ->with('success', 'Contato não foi criado');
+        }
         return redirect()->route('contacts.index')
-            ->with('success','Contato criado com sucesso.');
+            ->with('success', 'Contato criado com sucesso.');
     }
 
     /**
